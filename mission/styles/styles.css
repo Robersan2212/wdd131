@@ -13,7 +13,8 @@ header h1 {
     text-transform: uppercase;
     color: #000;
     margin-top: 20px;
-}
+    background-color: #006EB6;
+    }
 
 header h2 {
     font-size: 24px;
@@ -42,6 +43,24 @@ section p, section ul {
     color: #333;
 }
 
+
 footer {
-    margin-top: 20px;
+    margin-top: 70px;
+    margin-bottom: 20px;
+    margin-left: 220px;
 }
+
+body.dark, body.dark , body.dark , body.dark h3, body.dark p, body.dark li {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark header h1 {
+    color: #fff;
+}
+
+.dark header h2 {
+    color: #58afe8;
+}
+
+
