@@ -1,4 +1,5 @@
 /* blog.css */
+
 body {
     font-family: 'Helvetica', Arial, sans-serif;
     color: #473144;
@@ -6,8 +7,12 @@ body {
     padding: 0;
 }
 
-h1, h2 {
+h2 {
     font-family: 'Lora', Impact, serif;
+    color:#AF1B3F;
+}
+h1 {
+    margin-left: 600px;
 }
 
 a {
@@ -22,7 +27,12 @@ a:hover {
 header {
     text-align: center;
     padding: 20px;
-    border-bottom: 2px solid #EFC69B;
+    border: 2px solid #EFC69B;
+}
+
+nav {
+    text-align: center;
+    padding: 10px;
 }
 
 .main-nav {
@@ -31,6 +41,7 @@ header {
     justify-content: end;
     padding: 0;
     list-style: none;
+    border: #EFC69B;
 }
 
 .main-nav li {
@@ -56,6 +67,22 @@ main {
     gap: 20px;
     padding: 20px;
 }
+.skip-link {
+    position: fixed;
+    top: 50%;
+    left: -100%;
+    padding: 1em;
+    background: #000;
+    background:#EFC69B ;
+    color: #EFC69B;
+    text-decoration: none;
+    transform: translateY(-50%);
+    transition: left 0.5s;
+}
+
+.skip-link:focus {
+    left: 0;
+}
 
 .articles {
     display: grid;
@@ -63,8 +90,13 @@ main {
 }
 
 .article-details {
-    display: flex;
-    flex-direction: column;
+    width: 200px; 
+    padding: 10px;
+    height: 410px;
+    position: absolute;
+    left: 0; 
+    border-right: 1px solid #EFC69B 
+    
 }
 
 .article-content {
@@ -72,7 +104,9 @@ main {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-left: 300px;
 }
+
 
 .articles {
     display: grid;
@@ -80,8 +114,15 @@ main {
 }
 
 .article-details-second {
-    display: flex;
-    flex-direction: column;
+    width: 200px; 
+    padding: 10px;
+    height: 410px;
+    position: absolute;
+    left: 0;
+    margin-top:57px ;
+
+    border-right: 1px solid #EFC69B 
+    
 }
 
 .article-content-second {
@@ -89,7 +130,15 @@ main {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-left: 300px;
 }
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+    border: 2px solid #EFC69B;}
 
 article img {
     max-width: 100%;
