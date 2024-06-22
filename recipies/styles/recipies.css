@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Your+Chosen+Font&display=swap");
+
+:root {
+    --primary-color: #1B98E0;
+    --secondary-color: #59c3c3;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: 'Your Chosen Font', Arial, Helvetica, sans-serif;
+}
+
+/* Basic Reset and Global Styles */
+body {
+    font-family: var(--primary-font);
+    color: var(--text-dark);
+    background-color: var(--text-light);
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: var(--text-light);
+}
+
+.search-form {
+    margin-top: 10px;
+    display: flex;
+}
+
+.search-form input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-form button {
+    padding: 8px 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0 5px 5px 0;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* Recipe Section Styles */
+.recipe {
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.recipe h2 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.recipe-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recipe-content .description {
+    display: none; /* Hide on mobile */
+    text-align: center;
+}
+
+.rating {
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.rating .icon-star {
+    color: var(--primary-color);
+}
+
+.rating .icon-star-empty {
+    color: #ccc;
+}
+
+/* Footer Styles */
+footer {
+    height: auto;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 10px;
+    text-align: center;
+}
+
+.attribution {
+    font-size: 0.6em; /* Make attribution smaller */
+}
+
+.social {
+    margin-top: 10px;
+}
+
+.social a {
+    margin: 0 5px;
+}
+.social-icon {
+    width: 80px; /* Adjust the size as needed */
+    height: auto; /* Keeps the aspect ratio */
+}
+
+/* Mobile First */
+/* No need to change anything since we start with narrow layout */
+
+/* Tablet and Desktop */
+@media (min-width: 600px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .search-form {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .recipe-content .description {
+        display: block; /* Show description on wider screens */
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 960px) {
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .recipe {
+        max-width: 600px;
+    }
+}
