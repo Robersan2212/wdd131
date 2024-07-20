@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shop by Style</title>
+    
+    <style>
+        .carousel {
+            display: flex;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+        .carousel div {
+            scroll-snap-align: start;
+            flex-shrink: 0;
+            width: 100%;
+            height: 100%;
+            margin-right: 50px;
+            border-radius: 10px;
+            background: #eee;
+            transform-origin: center center;
+            transform: scale(1);
+            transition: transform 0.5s;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 100px;
+        }
+        .carousel div:target {
+            transform: scale(0.8);
+        }
+        .carousel img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    color: white;
+}
+
+nav ul li {
+    padding: 0 10px;
+    color: white;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    background-color: #1E1E1E;
+}
+
+img {
+    height: 300px;}
+
+h2 {
+    color: white;}
+ </style>
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <img src="./image/Sneak Peak.png" alt="Logo" style="height:50px;">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shopbystyle.html">Shop by Style</a></li>
+                <li><a href="./qa.html">Q&A</a></li>
+                
+            </ul>
+        </nav>
+    <h2>Nike</h2>
+    <div class="carousel" id="carousel1">
+        <div><img src="./image/airforce.png" alt="Nike 1"></div>
+        <div><img src="./image/cortez.png" alt="Nike 2"></div>
+        <div><img src="./image/Air Max.png" alt="Nike 3"></div>
+    </div>
+
+    <h2>Adidas</h2>
+    <div class="carousel" id="carousel2">
+        <div><img src="./image/samba.png" alt="Adidas 1"></div>
+        <div><img src="./image/Yeezy.png" alt="Adidas 2"></div>
+        <div><img src="./image/boost.png" alt="Adidas 3"></div>
+    </div>
+
+    <h2>Collector's Choice</h2>
+    <div class="carousel" id="carousel3">
+        <div><img src="./image/retro.png" alt="Collector's Choice 1"></div>
+        <div><img src="./image/oasics.png" alt="Collector's Choice 2"></div>
+        <div><img src="./image/converse.png" alt="Collector's Choice 3"></div>
+    </div>
+</body>
+</html>
